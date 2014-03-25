@@ -1,0 +1,11 @@
+FILE(GLOB src_files "*.*")
+
+SET (ALL_SRCS ${src_files})
+
+ADD_EXECUTABLE (pTreadTest_01 ${ALL_SRCS})
+
+TARGET_LINK_LIBRARIES (pTreadTest_01 ${LIB_PTHREAD})
+
+SET_TARGET_PROPERTIES(pTreadTest_01 PROPERTIES FOLDER "Apps")
+
+INSTALL_TARGETS (/bin pTreadTest_01)

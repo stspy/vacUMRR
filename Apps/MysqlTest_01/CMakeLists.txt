@@ -1,0 +1,11 @@
+FILE(GLOB src_files "*.*")
+
+SET (ALL_SRCS ${src_files})
+
+ADD_EXECUTABLE (MysqlTest_01 ${ALL_SRCS})
+
+TARGET_LINK_LIBRARIES (MysqlTest_01 ${LIB_MYSQL}) #
+
+SET_TARGET_PROPERTIES(MysqlTest_01 PROPERTIES FOLDER "Apps")
+
+INSTALL_TARGETS (/bin MysqlTest_01)
